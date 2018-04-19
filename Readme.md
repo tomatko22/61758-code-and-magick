@@ -1,6 +1,6 @@
 # Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url]
 
-* Студент: [Dorasheva Angelina](https://htmlacademy.ru/profile/tomat).
+* Студент: [Dorasheva Angelina](https://htmlacademy.ru/profile/tomat)
 
 ---
 
