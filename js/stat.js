@@ -20,6 +20,20 @@ var getRandomNum = function () {
  return Math.random();
 }
 
+// Функция, возвращающая максимальное значение элемента в массиве
+
+var getMaxElement = function (arr) {
+  var maxTime = arr[0];
+
+  for (var i = 0; i < arr.length; i ++) {
+    if (arr[i] > maxTime) {
+      maxTime = arr[i];
+    }
+  }
+  return maxTime;
+}
+
+
 window.renderStatistics = function (ctx, names, times) {
 // Рисуем облако c тенью
   ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
@@ -35,18 +49,9 @@ window.renderStatistics = function (ctx, names, times) {
   ctx.font = '16px PT Mono';
   ctx.fillText('Список результатов:', cloudX + paddingLeft, cloudY + paddingTop * 2);
 
-// Находим максимальное значение времени
-  var maxTime = times[0];
-
-  for (var i = 0; i < times.length; i ++) {
-    if (times[i] > maxTime) {
-      maxTime = times[i];
-    }
-  }
-
 // Находим коэфф для вычисления высоты колонок
   var histogramHeight = 150;
-  var rate = histogramHeight / (maxTime - 0);
+  var rate = histogramHeight / (getMaxElement(times) - 0);
 
 // Рисуем гистограмму
   for (var i = 0; i < times.length; i++) {
