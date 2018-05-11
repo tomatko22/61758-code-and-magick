@@ -67,4 +67,6 @@ userDialog.classList.remove('hidden');
 
 //Делаем видимым поле списка для похожих волшебников
 document.querySelector('.setup-similar').classList.remove('hidden');
+
+//Добавляем фрагмент
 similarListElement.appendChild(fragment);
